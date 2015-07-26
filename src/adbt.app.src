@@ -1,0 +1,13 @@
+{application, adbt,
+ [
+  {description, "ActorDB thrift generated code"},
+  {vsn, "1.1.0"},
+  {modules, [
+            ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
