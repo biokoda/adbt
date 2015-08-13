@@ -33,6 +33,15 @@ function_info('login', reply_type) ->
 function_info('login', exceptions) ->
   {struct, [{1, {struct, {'adbt_types', 'InvalidRequestException'}}}]}
 ;
+% salt(This)
+function_info('salt', params_type) ->
+  {struct, []}
+;
+function_info('salt', reply_type) ->
+  string;
+function_info('salt', exceptions) ->
+  {struct, []}
+;
 % exec_config(This, Sql)
 function_info('exec_config', params_type) ->
   {struct, [{1, string}]}
