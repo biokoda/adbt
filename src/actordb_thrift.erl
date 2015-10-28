@@ -151,7 +151,7 @@ function_info('actor_columns', params_type) ->
           {2, string}]}
 ;
 function_info('actor_columns', reply_type) ->
-  {list, string};
+  {map, string, string};
 function_info('actor_columns', exceptions) ->
   {struct, []}
 ;
