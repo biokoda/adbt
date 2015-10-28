@@ -127,5 +127,42 @@ function_info('exec_sql_param', reply_type) ->
 function_info('exec_sql_param', exceptions) ->
   {struct, [{1, {struct, {'adbt_types', 'InvalidRequestException'}}}]}
 ;
+% actor_types(This)
+function_info('actor_types', params_type) ->
+  {struct, []}
+;
+function_info('actor_types', reply_type) ->
+  {list, string};
+function_info('actor_types', exceptions) ->
+  {struct, []}
+;
+% actor_tables(This, Actor_type)
+function_info('actor_tables', params_type) ->
+  {struct, [{1, string}]}
+;
+function_info('actor_tables', reply_type) ->
+  {list, string};
+function_info('actor_tables', exceptions) ->
+  {struct, []}
+;
+% actor_columns(This, Actor_type, Actor_table)
+function_info('actor_columns', params_type) ->
+  {struct, [{1, string},
+          {2, string}]}
+;
+function_info('actor_columns', reply_type) ->
+  {list, string};
+function_info('actor_columns', exceptions) ->
+  {struct, []}
+;
+% uniqid(This)
+function_info('uniqid', params_type) ->
+  {struct, []}
+;
+function_info('uniqid', reply_type) ->
+  i64;
+function_info('uniqid', exceptions) ->
+  {struct, []}
+;
 function_info(_Func, _Info) -> erlang:error(function_clause).
 
