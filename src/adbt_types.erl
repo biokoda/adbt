@@ -59,7 +59,7 @@ struct_info_ext('Val') ->
           {5, undefined, bool, 'bval', undefined},
           {6, undefined, string, 'text', undefined},
           {7, undefined, bool, 'isnull', undefined},
-          {8, undefined, string, 'bin', undefined}]}
+          {8, undefined, string, 'blob', undefined}]}
 ;
 
 struct_info_ext('ReadResult') ->

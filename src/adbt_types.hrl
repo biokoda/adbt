@@ -27,7 +27,7 @@
                 'bval' :: boolean(),
                 'text' :: string() | binary(),
                 'isnull' :: boolean(),
-                'bin' :: string() | binary()}).
+                'blob' :: string() | binary()}).
 -type 'Val'() :: #'Val'{}.
 
 %% struct 'ReadResult'
