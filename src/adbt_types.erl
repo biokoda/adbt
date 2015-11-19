@@ -17,7 +17,8 @@ struct_info('Val') ->
           {4, double},
           {5, bool},
           {6, string},
-          {7, bool}]}
+          {7, bool},
+          {8, string}]}
 ;
 
 struct_info('ReadResult') ->
@@ -57,7 +58,8 @@ struct_info_ext('Val') ->
           {4, undefined, double, 'real', undefined},
           {5, undefined, bool, 'bval', undefined},
           {6, undefined, string, 'text', undefined},
-          {7, undefined, bool, 'isnull', undefined}]}
+          {7, undefined, bool, 'isnull', undefined},
+          {8, undefined, string, 'bin', undefined}]}
 ;
 
 struct_info_ext('ReadResult') ->
