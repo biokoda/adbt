@@ -39,9 +39,15 @@ struct_info('LoginResult') ->
           {4, {list, string}}]}
 ;
 
-struct_info('Result') ->
+struct_info('QueryResult') ->
   {struct, [{1, {struct, {'adbt_types', 'ReadResult'}}},
           {2, {struct, {'adbt_types', 'WriteResult'}}}]}
+;
+
+struct_info('Result') ->
+  {struct, [{1, {struct, {'adbt_types', 'ReadResult'}}},
+          {2, {struct, {'adbt_types', 'WriteResult'}}},
+          {3, {list, {struct, {'adbt_types', 'QueryResult'}}}}]}
 ;
 
 struct_info('InvalidRequestException') ->
@@ -80,9 +86,15 @@ struct_info_ext('LoginResult') ->
           {4, optional, {list, string}, 'writeaccess', []}]}
 ;
 
-struct_info_ext('Result') ->
+struct_info_ext('QueryResult') ->
   {struct, [{1, undefined, {struct, {'adbt_types', 'ReadResult'}}, 'rdRes', #'ReadResult'{}},
           {2, undefined, {struct, {'adbt_types', 'WriteResult'}}, 'wrRes', #'WriteResult'{}}]}
+;
+
+struct_info_ext('Result') ->
+  {struct, [{1, undefined, {struct, {'adbt_types', 'ReadResult'}}, 'rdRes', #'ReadResult'{}},
+          {2, undefined, {struct, {'adbt_types', 'WriteResult'}}, 'wrRes', #'WriteResult'{}},
+          {3, undefined, {list, {struct, {'adbt_types', 'QueryResult'}}}, 'batchRes', []}]}
 ;
 
 struct_info_ext('InvalidRequestException') ->

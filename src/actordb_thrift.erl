@@ -78,11 +78,24 @@ function_info('exec_single_param', params_type) ->
           {2, string},
           {3, string},
           {4, {list, string}},
-          {5, {list, {list, {struct, {'adbt_types', 'Val'}}}}}]}
+          {5, {list, {list, {list, {struct, {'adbt_types', 'Val'}}}}}}]}
 ;
 function_info('exec_single_param', reply_type) ->
   {struct, {'adbt_types', 'Result'}};
 function_info('exec_single_param', exceptions) ->
+  {struct, [{1, {struct, {'adbt_types', 'InvalidRequestException'}}}]}
+;
+% exec_single_batch_param(This, Actorname, Actortype, Sql, Flags, Bindingvals)
+function_info('exec_single_batch_param', params_type) ->
+  {struct, [{1, string},
+          {2, string},
+          {3, string},
+          {4, {list, string}},
+          {5, {list, {list, {list, {struct, {'adbt_types', 'Val'}}}}}}]}
+;
+function_info('exec_single_batch_param', reply_type) ->
+  {struct, {'adbt_types', 'Result'}};
+function_info('exec_single_batch_param', exceptions) ->
   {struct, [{1, {struct, {'adbt_types', 'InvalidRequestException'}}}]}
 ;
 % exec_multi(This, Actors, Actortype, Sql, Flags)
