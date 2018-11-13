@@ -51,10 +51,17 @@
                         'writeaccess' :: list()}).
 -type 'LoginResult'() :: #'LoginResult'{}.
 
+%% struct 'QueryResult'
+
+-record('QueryResult', {'rdRes' :: 'ReadResult'(),
+                        'wrRes' :: 'WriteResult'()}).
+-type 'QueryResult'() :: #'QueryResult'{}.
+
 %% struct 'Result'
 
 -record('Result', {'rdRes' :: 'ReadResult'(),
-                   'wrRes' :: 'WriteResult'()}).
+                   'wrRes' :: 'WriteResult'(),
+                   'batchRes' :: list()}).
 -type 'Result'() :: #'Result'{}.
 
 %% struct 'InvalidRequestException'
